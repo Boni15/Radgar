@@ -6,6 +6,7 @@ function App() {
   const objStyle= {backgroundColor: 'red'}
   return (
     
+    
     <div className="App"  style={ objStyle } onClick={ () => alert('Hola') } >
         <NavBar/>
         <img src={logo} className="App-logo" alt="logo"  />
