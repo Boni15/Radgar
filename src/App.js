@@ -2,11 +2,12 @@
 // import FeedbackMessage from './FeedBackMessage';
 // import { Col, Container, Row } from 'react-bootstrap';
 import './App.css';
+import { ItemListContainer } from './component/container/ItemListContainer';
 // va sin llaves porq cuando lo exportas como default no lleva
 import  {Navbar}  from './component/NavBar';
 import { Titulo } from './Titulo';
 // import { Image} from "react-bootstrap"
-import {AlertDismissible} from "./component/container/ItemListContainer"
+
 // import {Imagen} from "./component/CartWidget"
 
 //
@@ -22,9 +23,9 @@ import {AlertDismissible} from "./component/container/ItemListContainer"
  const App = () => {
  
     return(
-     
       <Titulo titulo="">
-        <AlertDismissible title ="Bienvenido al carrito de compras"/>
+        
+        <ItemListContainer title ="Bienvenido al carrito de compras"/>
           <h2> </h2>
         <Navbar/>
          

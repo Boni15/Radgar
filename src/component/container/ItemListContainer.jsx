@@ -1,6 +1,6 @@
 import {Alert, Button, } from "react-bootstrap"
 import { useState } from "react";
-       export const AlertDismissible =(props)=> {
+       export const ItemListContainer =(props)=> {
             const [show, setShow] = useState(true);
           
             return (
