@@ -1,28 +1,39 @@
-import React, {useState} from "react";
-import { Button,FormControl } from "react-bootstrap";
-import { InputGroup } from "react-bootstrap";
+import { useState } from "react"
+import { Button,FormControl } from "react-bootstrap"
+import { InputGroup } from "react-bootstrap"
+import React from "react"
 
-export default function ItemCount ({stock,initial, onAdd}) {
-    const [count,setCount] = useState(initial)
 
-    const handbleClick=()=>{
-        alert(`La cantidad Agregada es: ${count} mi rey `)
-    }
-    const restarClick=() =>{
-        count > 1 ? setCount(count-1) : alert("Debe elegir al menos 1 producto")
-    }
-    const aumentarClick  = ()=>{
-        count < parseInt(stock) ? setCount(count +1) : alert(`El Stock es de ${stock} Productos mi REY`)
+
+export default function ItemCount ({stock,initial,onAdd}) {
+     
+    const [count,setCount] =useState((initial))
+
+    const disminuirCount = ()=>{
+        count > 1 ? setCount(count - 1) : alert("Debe elegir al menos 1 producto")
     }
 
-    return (
+    const aumentarCount = ()=>{
+        count<parseInt(stock) ? setCount(count + 1) : alert(`El Stock es de ${stock} productos rey`)
+        console.log("Agregue una producto");
+    }
+    
+
+
+    return(
         <div>
-            <InputGroup className="mb-2">
-                 <Button variant="outline-secundary" onCLick={restarClick}>-</Button>
-                 <FormControl className="Text-center" aria-label="Example text with two button addons" value={count}></FormControl>
-                 <Button variant="outline-secundary" onClick={aumentarClick}>+</Button>
-            </InputGroup>
-            <Button variant="secundary" onClick={handbleClick}></Button>
+        <InputGroup className="mb-3">
+                <>
+                  <Button variant="warning" onClick={disminuirCount} disabled ={count < 1}>-</Button>
+                  <FormControl className="Text-center" aria-label="Example text with two button addons" value={count}/>
+                  <Button variant="warning" onClick={aumentarCount}>+</Button>
+                  <hr /><hr/>
+
+                  <Button variant="primary" onClick={()=>onAdd(count)}>Agreagar al carrito</Button> 
+                  
+                </>
+             </InputGroup>
+
         </div>
-)
-}
+    )
+} 

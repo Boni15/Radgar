@@ -1,12 +1,10 @@
-import React, { Children } from "react";
+import React from "react";
 import ItemCount from "./ItemCount";
 
+export default function ItemContainer (){
+    
+    return(
+        <ItemCount stock={8} initial={1} />
 
-export default function ItemListContainer({greeting}) { 
-return(
-    <div>
-        {greeting}
-        <ItemCount stocl = {8} initial={1}/>
-    </div>
-)
+    )
 }
