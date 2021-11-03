@@ -1,25 +1,26 @@
-
-
+import { Container } from 'reactstrap';
+// import "Style" form "style"
 import './App.css';
+import ItemListContainer from './component/ItemListContainer';
+import NavBar from './component/NavBar';
 
-import  ItemListContainer  from './component/container/ItemListContainer';
+
+ 
+
 
 
 function App() {
   return (
-    
+    <Container fluid>
     <div className="App">
-        <h1>Lista de compras</h1>
-     
-       
-          <ItemListContainer gretting="Bienvenido al carrito de Productos "/>
-          
-      
+      <NavBar/>
+      <ItemListContainer/>
       </div>
 
     
-    
+    </Container>
   );
 }
 
 export default App;
+  

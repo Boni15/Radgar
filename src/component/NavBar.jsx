@@ -1,18 +1,19 @@
-// 1ro IMPORTS-- Requiero las librerias, comonentes o lo que necesite arriba de todo
-// 2do Compónent-Desarrollo lo que necesito que haga el componente
-// 3ro EXPORT- Exportar el componente para poder utilizarlo en otras partes del codigo
-//  se intalaa boostrap
+import CartWidget from "./CartWidget"
+import { Navbar,Container,Nav } from "react-bootstrap"
 
-import { Imagen } from './CartWidget'
-
- export const Navbar = ()=>{
-    
-    return(
-        <div className ="App">
-            
-            <Imagen/>
-        </div>
+const NavBar =()=>{
+    return (
+        <Navbar bg="dark" variant="dark">
+    <Container>
+    <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+    <Nav className="me-auto">
+      <Nav.Link href="#home">Home</Nav.Link>
+      <Nav.Link href="#features">Features</Nav.Link>
+      <Nav.Link href="#pricing">Pricing</Nav.Link>
+      <CartWidget/>
+    </Nav>
+    </Container>
+  </Navbar>
     )
-    
 }
- 
+export default NavBar

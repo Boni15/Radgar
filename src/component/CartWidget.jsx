@@ -1,16 +1,12 @@
-
 import { Container,Row,Col,Image } from "react-bootstrap"
 
-
-// import { Row,Col,Image } from "react-dom"
-export const Imagen = () =>{
-  return(
-
-    <Container>
+const CartWidget =()=>{
+    return (
+        <Container>
       <Row>
  
         <Col xs={3}   md={2}>
-            <Image className="imagenCarrito" src="./assets/images/photoroom.png" alt="carrito" border="0"/>
+        <Image src="https://i.ibb.co/4Vgb6yN/Images-1.png" alt="Images (1)" border="0"/>
         </Col>
 
       </Row>
@@ -18,3 +14,5 @@ export const Imagen = () =>{
     
     )
 }
+export default CartWidget
+
